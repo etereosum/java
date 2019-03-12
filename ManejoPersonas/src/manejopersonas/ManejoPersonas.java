@@ -1,21 +1,29 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package manejopersonas;
 
-/**
- *
- * @author mac
- */
+import datos.PersonasJDBC;
+import domain.Persona;
+import java.util.List;
+
+
 public class ManejoPersonas {
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String[] args) {
-        // TODO code application logic here
+        PersonasJDBC personasJDBC = new PersonasJDBC();
+        //prueba del metodo insert
+        //personasJDBC.insert("Martha", "Salazar");
+        
+        //personasJDBC.update(1,"Cesar","Gonzalez");
+        
+        //personasJDBC.delete(2);
+        
+        List<Persona> personas = personasJDBC.select();
+        
+        for(Persona persona: personas){
+            System.out.print(persona);
+            System.out.println();
+        }
+            
     }
     
 }
