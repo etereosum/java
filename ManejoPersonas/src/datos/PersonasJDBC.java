@@ -30,7 +30,7 @@ public class PersonasJDBC {
             conn = Conexion.getConnection();
             stmt = conn.prepareStatement(SQL_INSERT);
             int index = 1;
-            System.out.println(index);
+
             stmt.setString(index++, nombre); //param 1 ?
             System.out.println(index);
             stmt.setString(index++, apellido);// param 2 ?
